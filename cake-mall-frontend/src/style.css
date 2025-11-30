@@ -1,0 +1,49 @@
+:root {
+  /* 品牌主色：焦糖色 */
+  --el-color-primary: #d35400; 
+  /* 辅助色 */
+  --bg-color: #f5f7fa;
+  --text-main: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+}
+
+/* 强制重置浏览器默认样式 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* 覆盖 Element Plus 的主色调 (可选，如果想深度定制) */
+.el-button--primary {
+  --el-button-bg-color: #d35400;
+  --el-button-border-color: #d35400;
+  --el-button-hover-bg-color: #e67e22;
+  --el-button-hover-border-color: #e67e22;
+}
+.el-pagination.is-background .el-pager li:not(.is-disabled).is-active {
+  background-color: #d35400;
+}

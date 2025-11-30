@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: cake-mall
+  datasource:
+    # ???????
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cake_mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: "0525"
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+# MyBatis-Plus ??
+mybatis-plus:
+  configuration:
+    # ?????????? (database_field -> javaProperty)
+    map-underscore-to-camel-case: true
+    # ?? SQL ?? (????????)
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # ???????
+      id-type: auto
+      # ?????? (?????????????????)
+      # logic-delete-field: deleted
